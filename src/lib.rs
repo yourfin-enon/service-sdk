@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use std::env;
 
 pub fn get_app_info() -> AppInfo {
@@ -38,5 +39,12 @@ pub struct AppInfo {
 impl AppInfo {
     pub fn get_enriched_name(&self) -> String {
         format!("{}-{}", self.name, self.location)
+    }
+
+    pub fn get_logger_fields(&self) -> Option<HashMap<String, String>> {
+        Some(HashMap::from([(
+            "Location".to_string(),
+            app_info.location.clone(),
+        )]))
     }
 }
