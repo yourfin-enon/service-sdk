@@ -5,14 +5,14 @@ pub fn get_app_info() -> AppInfo {
     let app_name = if let Ok(app_name) = app_name {
         app_name
     } else {
-        format!("{}-dev", env!("CARGO_PKG_NAME"))
+        format!("{}-local", env!("CARGO_PKG_NAME"))
     };
 
     let app_version = env::var("APP_VERSION");
     let app_version = if let Ok(app_version) = app_version {
         app_version
     } else {
-        format!("{}:dev", env!("CARGO_PKG_VERSION"))
+        format!("{}:local", env!("CARGO_PKG_VERSION"))
     };
 
     let app_location = env::var("APP_LOCATION");
