@@ -37,6 +37,6 @@ pub struct AppInfo {
 
 impl AppInfo {
     pub fn get_enriched_name(&self) -> String {
-        format!("{}-{}:{}", self.name, self.location, self.version)
+        format!("{}-{}", self.name, self.location)
     }
 }
