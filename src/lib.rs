@@ -44,7 +44,7 @@ impl AppInfo {
     pub fn get_logger_fields(&self) -> Option<HashMap<String, String>> {
         Some(HashMap::from([(
             "Location".to_string(),
-            app_info.location.clone(),
+            self.location.clone(),
         )]))
     }
 }
