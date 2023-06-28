@@ -30,6 +30,7 @@ pub fn get_app_info() -> AppInfo {
     }
 }
 
+#[derive(Debug)]
 pub struct AppInfo {
     pub name: String,
     pub version: String,
